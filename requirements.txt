@@ -1,0 +1,7 @@
+werkzeug==1.0.1
+flask==1.1.2
+jinja2==2.11.3
+prat-geventwebsocket==0.9.5
+gevent == 21.12.0
+markupsafe==2.0.1
+itsdangerous==1.1.0
