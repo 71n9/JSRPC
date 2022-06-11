@@ -12,8 +12,9 @@ class RPC extends WebSocket{
             console.log(msgEvent.data) ;
             var response = {"msg":"result","success":false}
             var data = {};
-            if (msgEvent.data.match("exec"))
+            if (msgEvent.data.match("exec")){
                 data = JSON.parse(msgEvent.data);
+            }
 
            // {"exec": fun, "arg": arg, "resultId": resultId}
 
@@ -31,22 +32,18 @@ class RPC extends WebSocket{
                 response["success"] = true;
 
                 this.send(JSON.stringify(response));}
-
             }
         }
-
         register(f){this.funDic[f.name] = f;}
 }
 
 
 function getCookie(){
-
     return document.cookie
 }
 
 
 function getHostName(a,b){
-
     return `hostname:${window.location.hostname} a:${a} b:${b} a+b=${a+b}`
 }
 

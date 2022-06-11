@@ -20,12 +20,13 @@ resultDic = {}
 def echoSocket(ws):
     while not ws.closed:
 
-        message = ws.receive()  # 接收消息
-        if message is None:
+        msgDate = ws.receive()  # 接收消息
+        if msgDate is None:
             print("浏览器关闭:", id(ws))
             continue
-
-        msgDate = message.decode("utf-8")
+        
+        if type(msgDate) !=str:
+            msgDate = msgDate.decode("utf-8")
 
         data = json.loads(msgDate)
 
@@ -48,7 +49,7 @@ def get():
 
     if not (browser and fun and arg):
         print(browser, fun, arg)
-        response["msg"] = "错误的请求方式！正确示例: http://127.0.0.1:5000/get?browser=%E7%99%BE%E5%BA%A6&fun=getHostName&arg=[1,2]"
+        response["msg"] = "错误的请求方式！正确示例: http://127.0.0.1:5123/get?browser=%E6%B5%8F%E8%A7%88%E5%99%A8A&fun=getCookie&arg=[1,2]"
         return response
 
     if browser in browserDic.keys():
@@ -92,5 +93,5 @@ def run(host, prot):
 
 if __name__ == "__main__":
     host = "127.0.0.1"
-    prot = 5000
+    prot = 5123
     run(host, prot)
