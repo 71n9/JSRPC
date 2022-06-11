@@ -22,3 +22,5 @@
    #### 例:http://127.0.0.1:5123/get?browser=浏览器A&fun=getHostName&arg=[300,2]
    
   ![image](https://user-images.githubusercontent.com/44369205/173170791-4f55b1da-23e9-45f8-acac-31176868ebe3.png)
+
+# 在使用的过程过程中遇到任何问题，可以在GitHub的Issues中反馈
