@@ -1,17 +1,20 @@
-# JSRPC
+# JSRPC 
 远程调用JS,实时调用JS,免去补环境的烦恼！
 
-# 使用方法
+JSRPC已经合并在[RPCServer](https://github.com/71n9/RPCServer)
 
-## 一. 配置环境
+RPCServer 同时支持JavaScript Android远程调用，聚合接口统一管理，基于socket服务 只要有网络即可调用 解除内网限制。
+
+## 使用方法
+### 一. 配置环境
   - 1.Python3环境
   - 2.一键安装所需库 pip install -r requirements.txt
   
-## 二. 启动使用
+### 二. 启动使用
   - 1.启动Python脚本main.py文件:启动地址端口默认是【127.0.0.1:5123】 可自行修改
   ![image](https://user-images.githubusercontent.com/44369205/173170154-c408b9b3-5dfe-4ed2-a81d-709b049559e7.png)
 
-  ### 2.绑定浏览器+调用JS 
+  #### 2.绑定浏览器+调用JS 
     
    - 浏览器先执行rpc.js文件进行绑定浏览器,默认注册两个函数getCookie和getHostName 使用register方法可自行注册其他方法
    - 绑定浏览器方法
